@@ -1,6 +1,7 @@
+from dataclasses import dataclass
+
+
+@dataclass
 class Airfoil:
     name: str
     filename: str
-    def __init__(self, name, filename):
-        self.name = name
-        self.filename = filename
