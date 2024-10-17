@@ -8,15 +8,13 @@ import sys
 from airfoil import Airfoil
 
 # Given parameters
-
-# chord = 1.7  # m
 wing_area = 24.985256859242  # m²
 wingspan = 14  # m
 oswald_efficiency = 0.85
 begin_altitude = 10000  # m
 min_velocity = 10  # m/s
 max_velocity = 140  # m/s
-volume = 11.463257  # m³
+volume = 11.4  # m³
 
 density = 1550  # kg/m³
 # The percentage of the glider's volume that is filled with material
@@ -161,8 +159,10 @@ for plot in plots:
     # Only initially graph the values we want to see
     plot.set_xlim([None, max_velocity])
 
+
 def on_close(_):
     sys.exit()
+
 
 # Exit if user closes the graph window
 fig.canvas.mpl_connect("close_event", on_close)
